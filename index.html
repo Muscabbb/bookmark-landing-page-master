@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's  device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700&family=Josefin+Sans:wght@300&family=Julee&family=Montserrat:wght@500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@400;500&family=Work+Sans:wght@200;300;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- The Style Sheet Link -->
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Start Header Section -->
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="images/logo-bookmark.svg" alt="">
+        </a>
+        <ul class="list">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+        <div class="toggle-bar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <!-- End Header Section -->
+    <!-- Start Main Content -->
+    <div class="main">
+      <div class="container">
+        <div class="text">
+          <h2>  A Simple Bookmark Manager</h2>
+          <p>  A clean and simple interface to organize your favourite websites. Open a new 
+            browser tab and see your sites load instantly. Try it for free.</p>
+            <div class="btns">
+              <a href="#">Get it on Chrome</a>
+              <a href="#">Get it on FireFox</a>
+            </div>
+        </div>
+        <div class="img">
+          <img src="images/illustration-hero.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- End Main Content -->
+    <!-- Start Features -->
+    <div class="features">
+      <h2 class="title">Features</h2>
+      <p class="sub-title">
+        Our aim is to make it quick and easy for you to access your favourite websites. 
+        Your bookmarks sync between your devices so you can access them on the go.
+      </p>
+      <ul>
+        <li><a href="#1" class="simple">Simple Bookmarking</a></li>
+        <li><a href="#2" class="speed">Speedy Searching</a></li>
+        <li><a href="#3" class="easy">Easy Sharing</a></li>
+        <li class="Feature-pointer simple-bookmark"></li>
+      </ul>
+      <div class="container">
+        <div class="img">
+          <img class="src" src="images/illustration-features-tab-1.svg" alt="">
+        </div>
+        <div class="info">
+          <h2 class="f-title">Bookmark in one click</h2>
+          <p class="constent-p">
+            Organize your bookmarks however you like. Our simple drag-and-drop interface 
+            gives you complete control over how you manage your favourite sites.
+          </p>
+          <a href="#">More Info</a>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Features -->
+    <!-- Start Download Section -->
+    <div class="download">
+      <h2 class="title">Download The Extentions</h2>
+      <p class="sub-title">
+        We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+        got a favourite you’d like us to prioritize.
+      </p>
+      <div class="container">
+        <div class="extention">
+          <img src="images/logo-chrome.svg" alt="">
+          <h3 class="ex-title">Add to Chrome</h3>
+          <p>Minimum Version 62</p>
+          <img src="images/bg-dots.svg" alt="">
+          <a href="#">Add & Install Extension</a>
+        </div>
+        <div class="extention">
+          <img src="images/logo-firefox.svg" alt="">
+          <h3 class="ex-title">Add to Chrome</h3>
+          <p>Minimum Version 62</p>
+          <img src="images/bg-dots.svg" alt="">
+          <a href="#">Add & Install Extension</a>
+        </div>
+        <div class="extention">
+          <img src="images/logo-opera.svg" alt="">
+          <h3 class="ex-title">Add to Chrome</h3>
+          <p>Minimum Version 62</p>
+          <img src="images/bg-dots.svg" alt="">
+          <a href="#">Add & Install Extension</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Download Section -->
+    <!-- Start FAQ -->
+    <div class="faq">
+      <div class="d-title">
+        <h2 class="title">Frequantily Asked Questions</h2>
+        <p class="sub-title">
+        Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
+      </p>
+      </div>
+      
+      <ul>
+        <li class="li">
+          <div class="faq-quetion">
+            <a href="#">What's Bookmarka?</a>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          
+          <div class="desc desc-active">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sequi, voluptate libero inventore officiis numquam iusto eius autem fugiat est debitis vel earum doloribus natus porro delectus pariatur, necessitatibus saepe?</p>
+          </div>
+          
+        </li>
+        <li class="li">
+          <div class="faq-quetion">
+            <a href="#">What's Bookmarka?</a>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          
+          <div class="desc desc-active">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sequi, voluptate libero inventore officiis numquam iusto eius autem fugiat est debitis vel earum doloribus natus porro delectus pariatur, necessitatibus saepe?</p>
+          </div>
+          
+        </li>
+        <li class="li">
+          <div class="faq-quetion">
+            <a href="#">What's Bookmarka?</a>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          
+          <div class="desc desc-active">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sequi, voluptate libero inventore officiis numquam iusto eius autem fugiat est debitis vel earum doloribus natus porro delectus pariatur, necessitatibus saepe?</p>
+          </div>
+          
+        </li>
+        <li class="li">
+          <div class="faq-quetion">
+            <a href="#">What's Bookmarka?</a>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          
+          <div class="desc desc-active">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sequi, voluptate libero inventore officiis numquam iusto eius autem fugiat est debitis vel earum doloribus natus porro delectus pariatur, necessitatibus saepe?</p>
+          </div>
+          
+        </li>
+        <li class="li">
+          <div class="faq-quetion">
+            <a href="#">What's Bookmarka?</a>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          
+          <div class="desc desc-active">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sequi, voluptate libero inventore officiis numquam iusto eius autem fugiat est debitis vel earum doloribus natus porro delectus pariatur, necessitatibus saepe?</p>
+          </div>
+          
+        </li>
+      </ul>
+      <a href="#">More Info</a>
+    </div>
+    <!-- End FAQ -->
+    <!-- Start Contact  -->
+      <div class="contact">
+        <span>35,000 + Already Joined</span>
+        <p>Stay Up-to-date With What We're doing</p>
+        <div class="forms">
+          <input type="email" placeholder="Enter Your Email pls" required>
+          <a href="#" class="btn">Contact Us</a>
+        </div>
+      </div>
+    <!-- End Contact  -->
+    <footer>
+      <div class="container">
+        <div class="lists">
+          <img src="images/logo-bookmark.svg" alt="">
+          <ul>
+            <li><a href="#">Feature</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <img src="images/icon-facebook.svg" alt="">
+          <img src="images/icon-twitter.svg" alt="">
+        </div>
+      </div>
+    </footer>
+    
+    <!-- The JS File Link -->
+    <script src="/app.js"></script>
+  </body>
+</html>
