@@ -143,7 +143,7 @@ header ul li:last-child a:hover{
 
 /* Start Main Section */
 .main{
-    height: calc(100vh - 90px);
+    height: calc(100vh - 250px);
     margin-top: 30px;
 }
 .main .container{
@@ -236,44 +236,40 @@ header ul li:last-child a:hover{
     margin: 0 auto 50px;
     position: relative;
 }
-.features ul li:not(:last-of-type){
+.features ul li{
     padding: 0 20px 20px;
     border-bottom: 1px solid var(--Grayish-Blue);
+    cursor: pointer;
 }
 .features ul li a{
     font-size: 1.1rem;
     color: var(--Grayish-Blue);
     transition: color .5s ease-in-out;
 }
-.features ul li a:hover{
+.features ul li:hover a{
     color: var(--Soft-Red);
+}
+.features ul li:hover{
+    border-bottom: 2px solid var(--Soft-Red);
+    opacity:.8;
 }
 .features ul li a:focus{
     color: #000;
 }
-.features ul li:last-of-type{
-    position: absolute;
-    height: 2px;
-    border-radius: 3px;
-    background: var(--Soft-Red);
-    bottom: 19px;
-    transition:all .5s ease;
+
+.li-active{
+    border-bottom: 2px solid var(--Soft-Red);
 }
 
-.simple-bookmark{
-    width: 205px;
-    left: 0;
-}
-.speed-searching{
-    width: 180px;
-    left: 40%;
-}
-.easy-sharing{
-    width: 135px;
-    left: 75%;
-}
 
 .features .container{
+    position: relative;
+    height: 200px;
+}
+
+
+
+.features .container .container-img{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -283,11 +279,11 @@ header ul li:last-child a:hover{
     flex-basis: 60%;
 }
 .features .container img{
-    width: 90%;
+    width: 50%;
     height: 50%;
 }
 .features .container .info{
-    flex-basis: 30%;
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -310,6 +306,19 @@ header ul li:last-child a:hover{
     background: var(--Soft-Blue);
     width: fit-content;
 }
+
+.container-img{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    display: none !important;
+}
+
+.divactive{
+    display: flex !important;
+}
+
+
 
 /* End Features */
 /* Start  Extensions  */
@@ -659,9 +668,7 @@ footer .container .social-media img{
         border-top: 1px solid var(--Grayish-Blue);
         padding: 20px !important;
     }
-    .features ul li:last-of-type{
-        display: none;
-    }
+
 
 
 

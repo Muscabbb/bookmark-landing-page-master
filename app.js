@@ -1,3 +1,13 @@
+//get li
+let lists = Array.from(document.querySelectorAll(".features ul li"));
+let containers = Array.from(document.querySelectorAll(".features .container-img"));
+
+let listsCount = lists.length;
+
+
+//get the currelnt li
+let currentList = 1;
+// burgar icon toggle
 document.querySelector(".toggle-bar").addEventListener('click',()=>{
     document.querySelector(".list").classList.toggle('active');
     document.querySelector(".fa-bars").classList.toggle('fa-xmark');
@@ -6,51 +16,32 @@ document.querySelector(".toggle-bar").addEventListener('click',()=>{
 
 
 
+//Set li an index attribute
+for(let i=0;i<listsCount;i++){
+    lists[i].setAttribute('data-index',i+1)
+}
 
-document.querySelector(".simple").addEventListener('click', () => {
+//Trigger the checker function
+Checker();
 
-    //pointing at the active element
-    document.querySelector(".Feature-pointer").classList.add("simple-bookmark");
+lists.forEach(function(el){
+    el.onclick = function(){
+        currentList = parseInt(this.getAttribute('data-index'));
+        Checker()
+    }
+})
+//Checker function
+function Checker(){
+    Remove();
+    containers[currentList -1].classList.add("divactive")
+}
 
-    document.querySelector(".Feature-pointer").classList.remove("speed-searching");
-    document.querySelector(".Feature-pointer").classList.remove("easy-sharing");
-
-    //Filtering the inside content
-    document.querySelector(".src").src=`images/illustration-features-tab-1.svg`;
-    document.querySelector(".f-title").innerHTML = "Bookmark in one click";
-    document.querySelector(".constent-p").innerHTML ="Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.";
-});
-
-document.querySelector(".speed").addEventListener('click', () => {
-     //pointing at the active element
-    document.querySelector(".Feature-pointer").classList.remove("simple-bookmark");
-
-    document.querySelector(".Feature-pointer").classList.add("speed-searching");
-    document.querySelector(".Feature-pointer").classList.remove("easy-sharing");
-
-
-
-    document.querySelector(".src").src=`images/illustration-features-tab-2.svg`;
-    document.querySelector(".f-title").innerHTML = "Intelligent search";
-    document.querySelector(".constent-p").innerHTML =" Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.";
-});
-
-document.querySelector(".easy").addEventListener('click', () => {
- //pointing at the active element
-    document.querySelector(".Feature-pointer").classList.remove("simple-bookmark");
-
-    document.querySelector(".Feature-pointer").classList.remove("speed-searching");
-    document.querySelector(".Feature-pointer").classList.add("easy-sharing");
-
-
-
-    document.querySelector(".src").src=`images/illustration-features-tab-3.svg`;
-    document.querySelector(".f-title").innerHTML = "Share your bookmarks";
-    document.querySelector(".constent-p").innerHTML ="Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.";
-});
-
-
-
+//Remove all clasess
+function Remove(){
+    containers.forEach(function(el){
+        el.classList.remove("divactive");
+    })
+}
 
 //FAQ Section Toggle
 let faq_lists = document.querySelectorAll(".li");
@@ -59,12 +50,11 @@ let icon_lists = document.querySelectorAll(".fa-angle-down");
 
     faq_lists.forEach(e => {
         e.addEventListener('click', _ => {
-            desc_lists.forEach(e => {
+
                 e.classList.toggle("desc-active");
-            })
-            icon_lists.forEach(e => {
+
+
                 e.classList.toggle("fa-angle-up");
-            })
         })
     });
     
